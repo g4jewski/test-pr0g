@@ -4,24 +4,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <title>Document</title>
+    <style>
+        * {
+            font-family: "Roboto";
+            color: white;
+        }
+
+        body {
+            height: 100vh;
+            overflow: hidden;
+            background-color: rgb(25, 25, 34);
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        form {
+            height: 55vh;
+            width: 25vh;
+            padding: 5vh;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(15, 14, 18);
+            border-radius: 3vh;
+            z-index: 100;
+            position: absolute;
+        }
+
+        input {
+            background-color: rgb(41, 35, 46);
+            border-radius: 0.7vh;
+            border: none;
+            padding: 1vh;
+            margin-top: -10px;
+        }
+
+        h4 {
+            color: rgb(185, 170, 170);
+        }
+
+        button {
+            height: 5vh;
+            padding: 1vh;
+            padding-left: 3vh;
+            padding-right: 3vh;
+            border: none;
+            border-radius: 1.3vh;
+            background-color: rgb(112, 85, 73);
+            font-weight: bold;
+            font-size: 1.8vh;
+            text-transform: uppercase;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            background-color: rgb(148, 112, 97);
+        }
+
+        #result {
+            margin-top: 3vh;
+            color: rgb(141, 48, 47);
+            font-weight: bold;
+            font-size: 3vh;
+            text-align: center;
+            border-top: 2px dotted rgb(0, 0, 0);
+            border-spacing: 1vh;
+        }
+
+        #page {
+            background-color: bisque;
+            height: 60vh;
+            width: 30vh;
+            transform: rotate(5deg);
+            z-index: 50;
+            margin-left: 10vh;
+            margin-top: 2vh;
+            border-top-left-radius: 0.6vh;
+            border-top-right-radius: 0.6vh;
+            border-bottom-left-radius: 3.5vh;
+            border-bottom-right-radius: 3.5vh;
+            --mask:
+                conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50%/30px 100%;
+            -webkit-mask: var(--mask);
+            mask: var(--mask);
+        }
+
+        @keyframes move {
+            0% {
+                margin-left: 10vh;
+            }
+
+            100% {
+                margin-left: 57vh;
+            }
+        }
+    </style>
 </head>
 
 <body>
+    <form>
+        <h1>Tip calc</h1>
+
+        <h4>The bill amount:</h4>
+        <input type="number" placeholder="amount..." id="bill" min="0"><br /><br />
+
+        <h4>The tip percentage:</h4>
+        <input type="number" placeholder="amount..." id="tip" min="0"><br /><br />
+
+        <h4>The amount of people:</h4>
+        <input type="number" placeholder="amount..." id="NumPeop" min="0"><br /><br />
+
+        <button id="btn" type="button" onclick="calculate()">Calculate</button>
+
+    </form>
+    <div id="page">
+        <p id="result"></p>
+    </div>
+
     <script>
+        const bill = document.getElementById("bill");
+        const tip = document.getElementById("tip");
+        const numpeop = document.getElementById("NumPeop");
+        const result = document.getElementById("result");
+        const page = document.getElementById("page");
 
-        let suma;
-        let b = Number(prompt("podaj b"));
-        let N = Number(prompt("podaj N"));
-        let L = 1;
+        function calculate() {
+            const BillInput = Number(bill.value);
+            const TipInput = Number(tip.value);
+            const PeopleInput = Number(numpeop.value);
+            let res;
 
-        suma = suma + b;
-        L++
+            res = (BillInput * (TipInput / 100)) / PeopleInput;
+            result.textContent = "Tip per person is " + res.toFixed(2) + "$";
 
-        if (L > N) {
-            document.write(suma)
-        } else {
-            suma = suma + b;
+            if (BillInput <= 0 || TipInput <= 0 || PeopleInput <= 0) {
+                result.textContent = "Please enter the correct info";
+            }
+            if (result.textContent != "") {
+                page.style.animation = "move 1s forwards";
+            }
         }
     </script>
 </body>
