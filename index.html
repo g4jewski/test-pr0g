@@ -27,7 +27,7 @@
         }
 
         form {
-            height: 55vh;
+            height: 59vh;
             width: 25vh;
             padding: 5vh;
             justify-content: center;
@@ -108,6 +108,25 @@
                 margin-left: 57vh;
             }
         }
+
+        @keyframes move-backward {
+            0% {
+                margin-left: 57vh;
+            }
+
+            100% {
+                margin-left: 10vh;
+            }
+        }
+
+        #clear {
+            margin-top: 18px;
+            background-color: rgb(135, 44, 44);
+        }
+
+        #clear:hover {
+            background-color: hsl(0, 51%, 45%);
+        }
     </style>
 </head>
 
@@ -126,6 +145,8 @@
 
         <button id="btn" type="button" onclick="calculate()">Calculate</button>
 
+
+        <button id="clear" type="button" onclick="clearing()">Clear</button>
     </form>
     <div id="page">
         <p id="result"></p>
@@ -153,6 +174,15 @@
             if (result.textContent != "") {
                 page.style.animation = "move 1s forwards";
             }
+        }
+
+        function clearing() {
+            result.textContent = "";
+            bill.value = null;
+            tip.value = null;
+            numpeop.value = null;
+
+            page.style.animation = "move-backward 1s forwards";
         }
     </script>
 </body>
