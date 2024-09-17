@@ -128,6 +128,31 @@
         #clear:hover {
             background-color: hsl(0, 51%, 45%);
         }
+
+        #corner-box {
+            right: 3vh;
+            top: 3vh;
+            position: absolute;
+            background-color: rgb(112, 85, 73);
+            width: 7vh;
+            height: 7vh;
+            border-radius: 1.5vh;
+            transition: all 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        #corner-box:hover {
+            background-color: rgb(148, 112, 97);
+            transform: scale(1.07);
+        }
+
+        img {
+            width: 3.5vh;
+            height: 3.5vh;
+        }
     </style>
 </head>
 
@@ -153,6 +178,9 @@
     <div id="page">
         <p id="result"></p>
     </div>
+
+
+    <div id="corner-box"><img src="icon.png" alt="icon"></div>
 
     <script>
         const bill = document.getElementById("bill");
