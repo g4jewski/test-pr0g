@@ -1,4 +1,7 @@
 /config/config.json
 /cache/*
+<<<<<<< HEAD
 .netbeans.xml
+.netbeans.*
+>>>>>>> 95f53cf (cos)
 
