@@ -1,2 +1,4 @@
 /config/config.json
 /cache
+.netbeans.xml
+config/.netbeans.xml
