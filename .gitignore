@@ -1,4 +1,8 @@
 /config/config.json
 /cache/*
+<<<<<<< HEAD
 .netbeans.xml
+=======
+.netbeans.*
+>>>>>>> 95f53cf1f26d1f02b3fffcdccf40e754c6e13194
 
