@@ -39,99 +39,99 @@ f) Changes and Differences:
 Git Commands:
 
 a) git init:
-Description: Initializes a new Git repository.
-Usage: git init
+- Description: Initializes a new Git repository.
+- Usage: git init
 
 b) git clone <repository>:
-Description: Clones an existing repository into a new directory.
-Usage: git clone https://github.com/user/repo.git
+- Description: Clones an existing repository into a new directory.
+- Usage: git clone https://github.com/user/repo.git
 
 c) git status:
-Description: Shows the status of changes as untracked, modified, or staged.
-Usage: git status
+- Description: Shows the status of changes as untracked, modified, or staged.
+- Usage: git status
 
 d) git add <file>:
-Description: Stages changes to the specified file for the next commit.
-Usage: git add filename.txt
+- Description: Stages changes to the specified file for the next commit.
+- Usage: git add filename.txt
 For adding all changes:
-Usage: git add .
+- Usage: git add .
 
 e) git commit -m "<message>":
-Description: Commits the staged changes with a descriptive message.
-Usage: git commit -m "Commit message here"
+- Description: Commits the staged changes with a descriptive message.
+- Usage: git commit -m "Commit message here"
 
 f) git commit -a
-Description: Commits all tracked changes (similar to add).
-Usage: git commit -a -m "Commit message here"
+- Description: Commits all tracked changes (similar to add).
+- Usage: git commit -a -m "Commit message here"
 
 g) git push origin <branch>:
-Description: Pushes your changes to the remote repository on the specified branch.
-Usage: git push origin main
+- Description: Pushes your changes to the remote repository on the specified branch.
+- Usage: git push origin main
 
 h) git pull origin <branch>:
-Description: Fetches and merges changes from the remote repository into your current branch.
-Usage: git pull origin main
+- Description: Fetches and merges changes from the remote repository into your current branch.
+- Usage: git pull origin main
 
-i)git branch
-Description: Lists all branches in the current repository.
-Usage: git branch
+i)git branch:
+- Description: Lists all branches in the current repository.
+- Usage: git branch
 
-j)git checkout <branch>
-Description: Switches to the specified branch.
-Usage: git checkout feature-branch
+j)git checkout <branch>:
+- Description: Switches to the specified branch.
+- Usage: git checkout feature-branch
 
-k)git merge <branch>
-Description: Merges the specified branch into the current branch.
-Usage: git merge feature-branch
+k)git merge <branch>:
+- Description: Merges the specified branch into the current branch.
+- Usage: git merge feature-branch
 
-l)git stash
-Description: Temporarily saves changes that are not ready to be committed.
-Usage: git stash
+l)git stash:
+- Description: Temporarily saves changes that are not ready to be committed.
+- Usage: git stash
 
-m)git stash pop
-Description: Applies the most recently stashed changes and removes them from the stash list.
-Usage: git stash pop
+m)git stash pop:
+- Description: Applies the most recently stashed changes and removes them from the stash list.
+- Usage: git stash pop
 
-n)git log
-Description: Shows the commit history for the repository.
-Usage: git log
+n)git log:
+- Description: Shows the commit history for the repository.
+- Usage: git log
 
-o)git reset <commit>
-Description: Resets the current branch to the specified commit.
-Usage: git reset HEAD~1 (resets to the previous commit)
+o)git reset <commit>:
+- Description: Resets the current branch to the specified commit.
+- Usage: git reset HEAD~1 (resets to the previous commit)
 
-p)git remote -v
-Description: Lists the remote repositories associated with the local repository.
-Usage: git remote -v
+p)git remote -v:
+- Description: Lists the remote repositories associated with the local repository.
+- Usage: git remote -v
 
 
 
 
 Common Bash Commands:
 
-a)clear
-Description: Clears the terminal screen.
-Usage: clear
+a)clear:
+- Description: Clears the terminal screen.
+- Usage: clear
 
-b)touch <filename>
-Description: Creates a new, empty file or updates the timestamp of an existing file.
-Usage: touch newfile.txt
+b)touch <filename>:
+- Description: Creates a new, empty file or updates the timestamp of an existing file.
+- Usage: touch newfile.txt
 
-c)ls
-Description: Lists the files and directories in the current directory.
-Usage: ls
+c)ls:
+- Description: Lists the files and directories in the current directory.
+- Usage: ls
 
 d)Options:
-Detailed list: ls -l
-Include hidden files: ls -a
+- Detailed list: ls -l
+- Include hidden files: ls -a
 
-e)rm <file>
-Description: Removes (deletes) a specified file.
-Usage: rm filename.txt
+e)rm <file>:
+- Description: Removes (deletes) a specified file.
+- Usage: rm filename.txt
 
-f)rm -rf <directory>
-Description: Recursively removes a directory and all its contents (use with caution).
-Usage: rm -rf directoryname
+f)rm -rf <directory>:
+- Description: Recursively removes a directory and all its contents (use with caution).
+- Usage: rm -rf directoryname
 
 Tips:
 -Always make sure you're on the correct branch before making changes.
