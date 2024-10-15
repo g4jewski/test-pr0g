@@ -31,152 +31,109 @@ f) Changes and Differences:
 - `git reset`
 
 
-Git Commands
-git init
 
+
+
+
+
+Git Commands:
+
+a) git init:
 Description: Initializes a new Git repository.
-
 Usage: git init
 
-git clone <repository>
-
+b) git clone <repository>:
 Description: Clones an existing repository into a new directory.
-
 Usage: git clone https://github.com/user/repo.git
 
-git status
-
+c) git status:
 Description: Shows the status of changes as untracked, modified, or staged.
-
 Usage: git status
 
-git add <file>
-
+d) git add <file>:
 Description: Stages changes to the specified file for the next commit.
-
 Usage: git add filename.txt
-
 For adding all changes:
-
 Usage: git add .
 
-git commit -m "<message>"
-
+e) git commit -m "<message>":
 Description: Commits the staged changes with a descriptive message.
-
 Usage: git commit -m "Commit message here"
 
-git commit -a
-
+f) git commit -a
 Description: Commits all tracked changes (similar to add).
-
 Usage: git commit -a -m "Commit message here"
 
-git push origin <branch>
-
+g) git push origin <branch>:
 Description: Pushes your changes to the remote repository on the specified branch.
-
 Usage: git push origin main
 
-git pull origin <branch>
-
+h) git pull origin <branch>:
 Description: Fetches and merges changes from the remote repository into your current branch.
-
 Usage: git pull origin main
 
-git branch
-
+i)git branch
 Description: Lists all branches in the current repository.
-
 Usage: git branch
 
-git checkout <branch>
-
+j)git checkout <branch>
 Description: Switches to the specified branch.
-
 Usage: git checkout feature-branch
 
-git merge <branch>
-
+k)git merge <branch>
 Description: Merges the specified branch into the current branch.
-
 Usage: git merge feature-branch
 
-git stash
-
+l)git stash
 Description: Temporarily saves changes that are not ready to be committed.
-
 Usage: git stash
 
-git stash pop
-
+m)git stash pop
 Description: Applies the most recently stashed changes and removes them from the stash list.
-
 Usage: git stash pop
 
-git log
-
+n)git log
 Description: Shows the commit history for the repository.
-
 Usage: git log
 
-git reset <commit>
-
+o)git reset <commit>
 Description: Resets the current branch to the specified commit.
-
 Usage: git reset HEAD~1 (resets to the previous commit)
 
-git remote -v
-
+p)git remote -v
 Description: Lists the remote repositories associated with the local repository.
-
 Usage: git remote -v
 
-Common Bash Commands
-clear
 
+
+
+Common Bash Commands:
+
+a)clear
 Description: Clears the terminal screen.
-
 Usage: clear
 
-touch <filename>
-
+b)touch <filename>
 Description: Creates a new, empty file or updates the timestamp of an existing file.
-
 Usage: touch newfile.txt
 
-ls
-
+c)ls
 Description: Lists the files and directories in the current directory.
-
 Usage: ls
 
-Options:
-
+d)Options:
 Detailed list: ls -l
-
 Include hidden files: ls -a
 
-rm <file>
-
+e)rm <file>
 Description: Removes (deletes) a specified file.
-
 Usage: rm filename.txt
 
-rm -rf <directory>
-
+f)rm -rf <directory>
 Description: Recursively removes a directory and all its contents (use with caution).
-
 Usage: rm -rf directoryname
 
-Summary
-Git Commands: Used for version control tasks (initialize, clone, commit, push, pull, branch management, etc.).
-
-Bash Commands: Used for file and directory management in the terminal.
-
-Tips
-Always make sure you're on the correct branch before making changes.
-
-Use git status frequently to see the state of your working directory.
-
-Be cautious with rm -rf, as it will delete files/directories without confirmation.
+Tips:
+-Always make sure you're on the correct branch before making changes.
+-Use git status frequently to see the state of your working directory.
+-Be cautious with rm -rf, as it will delete files/directories without confirmation.
